@@ -1,0 +1,138 @@
+/**
+Pretty much required CSS
+**/
+.panel-root {
+	width:0;
+	height:0;
+}
+
+.panel-group-of-groups {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	display:inline-block;
+}
+
+.panel-group {
+	margin:0;
+	padding:0;
+	position:relative;
+}
+
+.panel-tabs {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	
+	float:left;
+}
+
+.panel-tab {
+	margin:0;
+	padding:0;
+	display:inline-block;
+}
+
+.panel-group-handle {
+	float:right;
+}
+
+.panel {
+	display:none;
+}
+
+.panel.panel-open {
+	display:block;
+}
+
+/**
+Fancy Styling
+**/
+.panel-group-of-groups {
+	min-height:20px;
+	min-width:20px;
+}
+.panel-tabs-bar {
+	background: #777777; /* Old browsers */
+    background: -moz-linear-gradient(top,  #777777 0%, #555555 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#777777), color-stop(100%,#555555)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #777777 0%,#555555 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #777777 0%,#555555 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #777777 0%,#555555 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #777777 0%,#555555 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#555555',GradientType=0 ); /* IE6-9 */
+    color: #444;
+    border-top: 1px solid #444;
+    line-height:20px;
+}
+
+.panel-tab {
+	font-weight: bold;
+   	background: #939393; /* Old browsers */
+   	background: -moz-linear-gradient(top,  #939393 0%, #666666 100%); /* FF3.6+ */
+   	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#777777), color-stop(100%,#666666)); /* Chrome,Safari4+ */
+   	background: -webkit-linear-gradient(top,  #939393 0%,#666666 100%); /* Chrome10+,Safari5.1+ */
+   	background: -o-linear-gradient(top,  #939393 0%,#666666 100%); /* Opera 11.10+ */
+   	background: -ms-linear-gradient(top,  #939393 0%,#666666 100%); /* IE10+ */
+   	background: linear-gradient(to bottom,  #939393 0%,#666666 100%); /* W3C */
+   	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#666666',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #555;
+    border-top: none;
+}
+
+.panel-tab a {
+    padding: 3px 10px;
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	font-family: "myriad-pro-1","myriad-pro-2","Helvetica","Arial", "Myriad Pro", sans-serif;
+    color: #fff;
+	text-shadow: 0 -1px 0 #000;
+	text-decoration:none;
+}
+
+.panel-tab a:hover {
+    background: #999;
+}
+
+.panel-tab.panel-open {
+    background: #cccccc; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cccccc 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #cccccc 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #cccccc 0%,#eeeeee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #cccccc 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #cccccc 0%,#eeeeee 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+    border-top-color: #666;
+    border-bottom-color: #eee;
+    border-left-color: #999;
+    border-top: 1px solid #ccc;
+}
+
+.panel-tab.panel-open a {
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.panel-tab.panel-open a:hover {
+    background: #eee;
+}
+
+.panel {
+	background: #fff;
+	border: 1px solid #999;
+	border-top: none;
+}
+
+.panel {
+	overflow:auto;
+}
+
+.panel-group-of-groups .ui-state-highlight {
+	width:100px;
+	height:25px;
+	border:1px solid yellow;
+	display:inline-block;
+}
