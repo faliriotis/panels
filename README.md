@@ -114,10 +114,31 @@ Events
 ------
 * panelOpened
 
+Fired when a panel is opened. Returns an object that contains an attribute "panelElement," which
+is a jQuery representation of the panel element.
+
 * panelClosed
+
+Fired when a panel is closed. Returns an object that contains an attribute "panelElement," which
+is a jQuery representation of the panel element.
 
 * panelMoved
 
+Fired when a panel is moved. Returns an object that contains the following attributes:
+* panelElement - jQuery representation of the panel element
+* oldGroupElement - jQuery representation of the old group element
+* newGroupElement - jQuery representation of the new group element
+* oldGroupOfGroupsElement - jQuery representation of the old group of groups element
+* newGroupOfGroupsElement - jQuery representation of the new group of groups element
+
 * panelGroupMoved
 
+Fired when a panel group is moved. Returns an object that contains the following attributes:
+* groupElement - jQuery representation of the group element
+* oldGroupOfGroupsElement - jQuery representation of the old group of groups element
+* newGroupOfGroupsElement - jQuery representation of the new group of groups element
+
 * panelResized
+
+Fired when a panel is resized. Returns an object that contains an attribute "panelElement," which
+is a jQuery representation of the panel element.
