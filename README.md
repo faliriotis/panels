@@ -8,6 +8,7 @@ Usage
 Terms
 -----
 Before I explain how to use the panels widget, there are some terms that I use that I will explain here.
+
 1. Panel: Holds the content that appears when you click a tab.
 2. Group: Holds a list of tabs and the panels associated with those tabs.
 3. Group of Groups: Holds one or many groups.
