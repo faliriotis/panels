@@ -74,19 +74,41 @@ Methods
 -------
 * exportStructure
 
-* openPanel
+Returns an array that represents the current state of the panels (see the structure option). If you want to keep track
+of how a user configured their panels, you can save the result of this function and then construct an instance of panels
+later on using the result of this function at the structure option.
 
-* closePanel
+* openPanel(panelElement)
 
-* isPanelOpen
+Opens the panel element.
 
-* togglePanel
+* closePanel(panelElement)
 
-* movePanelToGroup
+Closes the panel element
 
-* moveGroupToGroupOfGroups
+* isPanelOpen(panelElement)
 
-* movePanelToGroupOfGroups
+Returns true if the panel is open, false otherwise.
+
+* togglePanel(panelElement)
+
+If the panel element is opened, it will close it. Otherwise, it will open it.
+
+* movePanelToGroup(panelElement, groupElement [, index])
+
+Moves the panel element to the panel group. If you specify an index, the tab will be
+inserted at that index. Otherwise, the tab will be added to the end.
+
+* moveGroupToGroupOfGroups(groupElement, groupOfGroupsElement [, index])
+
+Moves the group element to the group of groups element. If you specify an index, the group
+will be inserted at that index. Otherwise, the group will be added to the end.
+
+* movePanelToGroupOfGroups(panelElement, groupOfGroupsElement [, index])
+
+Creates a new group inside of the group of groups element and moves the panel element to
+that new group. If you specify an index, the new group will be inserted at that index.
+Otherwise, the group will be added to the end.
 
 Events
 ------
