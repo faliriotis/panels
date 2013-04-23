@@ -46,18 +46,19 @@ that equals the id of the panel. There are also some other options at each level
 an example with all the options:
 
     [{
-        classes: "myCustomGroupOfGroupsClass",
-        groups: [{
-            classes: "myCustumGroupClass",
-            panels: [{
-                id: "myPanelId"
-            }],
-            openPanel: "panelIdOfOpenPanel"
-        }],
-        resizable: {
-        	handles: "s sw w"
-        }
+    	classes: "myCustomGroupOfGroupsClass",
+    	groups: [{
+    		classes: "myCustumGroupClass",
+    		panels: [{
+    			id: "myPanelId"
+    		}],
+    		openPanel: "panelIdOfOpenPanel"
+    	}],
+    	resizable: {
+    		handles: "s sw w"
+    	}
     }]
+    
 
 * panelsSortable:
 A boolean that indicates if the tabs within a group should be sortable. Default is true.
