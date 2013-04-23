@@ -21,6 +21,7 @@ The most basic usage of panels is initialized just like jquery tabs. For more ex
 see the files in the examples folder.
 
 Html:
+
     <div id="panels">
     	<ul>
     		<li><a href="tab-1">Tab 1</a></li>
@@ -31,6 +32,7 @@ Html:
     </div>
     
 Javascript:
+
     $("#panels").panels();
 
 Options
@@ -42,6 +44,7 @@ that has objects to represent groups. Each group object has an array called pane
 has objects to represent panels. Finally, each panel object has an id that is a string
 that equals the id of the panel. There are also some other options at each level. Here is
 an example with all the options:
+
     [{
         classes: "myCustomGroupOfGroupsClass",
         groups: [{
