@@ -55,17 +55,18 @@ has objects to represent panels. Finally, each panel object has an id that is a 
 that equals the id of the panel. There are also some other options at each level. Here is
 an example with all the options:
 
-        structure: [{
-    	    classes: "myCustomGroupOfGroupsClass",
-    	    groups: [{
-                classes: "myCustumGroupClass",
-                panels: [{
-                    id: "myPanelId"
+        structure: [{ //An array of group of groups
+    	    classes: "myCustomGroupOfGroupsClass", //Custom class on this group of groups element
+    	    groups: [{ //An array of groups
+                classes: "myCustumGroupClass", //Custom class on this group element
+                panels: [{ //An array of panels
+                    id: "myPanelId" //The id of the panel
                 }],
-                openPanel: "panelIdOfOpenPanel"
+                openPanel: "panelIdOfOpenPanel" //The id of the opened panel
             }],
-            resizable: {
-                handles: "s sw w"
+            resizable: { //If this option is set, the panels will be resizable
+                handles: "s sw w" //Optionally, you can set where the handles will be on the panel.
+                //This has the same syntax as the handles option on jQuery UI resizable
             }
         }]
     
