@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- jquery and jquery ui css and js -->
+		<script src="./jquery-ui/js/jquery-1.9.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="./jquery-ui/css/jquery-ui-1.10.2.custom.css">
+		<script src="./jquery-ui/js/jquery-ui-1.10.2.custom.js"></script>
+		
+		<!-- The panels css and js -->
+		<link rel="stylesheet" type="text/css" href="../jquery.ui.panels.css">
+		<script src="../jquery.ui.panels.js"></script>
+		
+		<!-- Example js -->
+		<script type="text/javascript">
+			$(function() {
+				$("#panels").panels({
+					structure:[{
+						groups: [{
+							panels: [{
+								id: "tab-1"
+							}, {
+								id: "tab-2"
+							}, {
+								id: "tab-3"
+							}, {
+								id: "tab-4"
+							}],
+							openPanel: "tab-1"
+						}, {
+							panels: [{
+								id: "tab-5"
+							}, {
+								id: "tab-6"
+							}, {
+								id: "tab-7"
+							}, {
+								id: "tab-8"
+							}],
+							openPanel: "tab-5"
+						}]
+					}]
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Two Groups</h1>
+		<p>
+			This example demonstrates how you can create two different groups of panels. The user is able
+			to drag tabs between panels, change the order of the groups, and even create new groups by
+			dragging panels out of their groups.
+		</p>
+		<div id="panels">
+			<ul>
+				<li><a href="#tab-1">Tab 1</a></li>
+				<li><a href="#tab-2">Tab 2</a></li>
+				<li><a href="#tab-3">Tab 3</a></li>
+				<li><a href="#tab-4">Tab 4</a></li>
+				<li><a href="#tab-5">Tab 5</a></li>
+				<li><a href="#tab-6">Tab 6</a></li>
+				<li><a href="#tab-7">Tab 7</a></li>
+				<li><a href="#tab-8">Tab 8</a></li>
+			</ul>
+			<div id="tab-1">Tab 1 Content</div>
+			<div id="tab-2">Tab 2 Content</div>
+			<div id="tab-3">Tab 3 Content</div>
+			<div id="tab-4">Tab 4 Content</div>
+			<div id="tab-5">Tab 5 Content</div>
+			<div id="tab-6">Tab 6 Content</div>
+			<div id="tab-7">Tab 7 Content</div>
+			<div id="tab-8">Tab 8 Content</div>
+		</div>
+	</body>
+</html>

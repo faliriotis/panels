@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- jquery and jquery ui css and js -->
+		<script src="./jquery-ui/js/jquery-1.9.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="./jquery-ui/css/jquery-ui-1.10.2.custom.css">
+		<script src="./jquery-ui/js/jquery-ui-1.10.2.custom.js"></script>
+		
+		<!-- The panels css and js -->
+		<link rel="stylesheet" type="text/css" href="../jquery.ui.panels.css">
+		<script src="../jquery.ui.panels.js"></script>
+		
+		<!-- Example css and js -->
+		<style type="text/css">
+			.left-group-of-groups {
+				position: fixed;
+				left: 0px;
+				top: 200px;
+			}
+			
+			.right-group-of-groups {
+				position: fixed;
+				right: 0px;
+				top: 200px;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function() {
+				$("#panels").panels({
+					structure:[{
+						classes: "left-group-of-groups",
+						groups: [{
+							panels: [{
+								id: "tab-1"
+							}, {
+								id: "tab-2"
+							}, {
+								id: "tab-3"
+							}, {
+								id: "tab-4"
+							}],
+							openPanel: "tab-1"
+						}]
+					}, {
+						classes: "right-group-of-groups",
+						groups: [{
+							panels: [{
+								id: "tab-5"
+							}, {
+								id: "tab-6"
+							}, {
+								id: "tab-7"
+							}, {
+								id: "tab-8"
+							}],
+							openPanel: "tab-5"
+						}]
+					}]
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Two Groups of Groups</h1>
+		<p>
+			This example shows how you can have tab groups in different places on the screen. One of the "groups of groups" is fixed to the left,
+			and the other is fixed to the right. Within each group of groups, you can have multiple groups of tabs. In this example, the user is
+			able to create new groups by dragging tabs above or below their groups, move groups from the left side of the page to the right (and vice versa),
+			and move tabs between groups.
+		</p>
+		<div id="panels">
+			<ul>
+				<li><a href="#tab-1">Tab 1</a></li>
+				<li><a href="#tab-2">Tab 2</a></li>
+				<li><a href="#tab-3">Tab 3</a></li>
+				<li><a href="#tab-4">Tab 4</a></li>
+				<li><a href="#tab-5">Tab 5</a></li>
+				<li><a href="#tab-6">Tab 6</a></li>
+				<li><a href="#tab-7">Tab 7</a></li>
+				<li><a href="#tab-8">Tab 8</a></li>
+			</ul>
+			<div id="tab-1">Tab 1 Content</div>
+			<div id="tab-2">Tab 2 Content</div>
+			<div id="tab-3">Tab 3 Content</div>
+			<div id="tab-4">Tab 4 Content</div>
+			<div id="tab-5">Tab 5 Content</div>
+			<div id="tab-6">Tab 6 Content</div>
+			<div id="tab-7">Tab 7 Content</div>
+			<div id="tab-8">Tab 8 Content</div>
+		</div>
+	</body>
+</html>

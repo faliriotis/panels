@@ -1,10 +1,6 @@
 /**
 Pretty much required CSS
 **/
-.panel-root {
-	width:0;
-	height:0;
-}
 
 .panel-group-of-groups {
 	list-style-type: none;

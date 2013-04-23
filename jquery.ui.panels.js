@@ -9,8 +9,6 @@
 
 		// the constructor
 		_create: function() {
-			this.element.addClass("panel-root");
-			
 			this.providedTabList = this.element.children("ul").first().detach();
 			
 			if (this.options.structure) {
@@ -38,10 +36,16 @@
 				});
 			});
 			
+			var group = {
+				panels: panels
+			};
+			
+			if (panels.length > 0) {
+				group.openPanel = panels[0].id
+			}
+			
 			return [{
-				groups: [{
-					panels: panels
-				}]
+				groups: [group]
 			}];
 		},
 		
@@ -54,7 +58,6 @@
 				groupOfGroupsElement.addClass(groupOfGroupsStructure.classes);
 			}
 			
-			this.element.append(groupOfGroupsElement);
 			groupOfGroupsStructure.internal = {
 				type: "groupOfGroups",
 				element: groupOfGroupsElement
@@ -68,6 +71,8 @@
 			if (this.options.groupsSortable) {
 				this._addSortableToGroups(groupOfGroupsStructure);
 			}
+			
+			this.element.parent().append(groupOfGroupsElement);
 		},
 		
 		_addGroupToDom: function(groupStructure, parentStructure) {
@@ -117,7 +122,7 @@
 			}
 			
 			if (groupStructure.openPanel) {
-				this.openPanel(this.element.find("#" + groupStructure.openPanel));
+				this.openPanel(groupElement.find("#" + groupStructure.openPanel));
 			}
 		},
 
@@ -279,8 +284,6 @@
 			}
 			
 			this.element.prepend(this.providedTabList);
-			
-			this.element.removeClass("panel-root");
 		},
 		
 		_destoryGroupOfGroups: function(groupOfGroupsStructure) {

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- jquery and jquery ui css and js -->
+		<script src="./jquery-ui/js/jquery-1.9.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="./jquery-ui/css/jquery-ui-1.10.2.custom.css">
+		<script src="./jquery-ui/js/jquery-ui-1.10.2.custom.js"></script>
+		
+		<!-- The panels css and js -->
+		<link rel="stylesheet" type="text/css" href="../jquery.ui.panels.css">
+		<script src="../jquery.ui.panels.js"></script>
+		
+		<!-- Example js -->
+		<script type="text/javascript">
+			$(function() {
+				$("#panels").panels();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="panels">
+			<ul>
+				<li><a href="#tab-1">Tab 1</a></li>
+				<li><a href="#tab-2">Tab 2</a></li>
+				<li><a href="#tab-3">Tab 3</a></li>
+				<li><a href="#tab-4">Tab 4</a></li>
+			</ul>
+			<div id="tab-1">Tab 1 Content</div>
+			<div id="tab-2">Tab 2 Content</div>
+			<div id="tab-3">Tab 3 Content</div>
+			<div id="tab-4">Tab 4 Content</div>
+		</div>
+	</body>
+</html>
