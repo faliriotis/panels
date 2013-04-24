@@ -150,12 +150,26 @@
 				self.togglePanel(panelElement);
 			});
 			
+			panelElement.on("click", function() {
+				self._firePanelPossiblyUpdatedEvent(panelElement);
+			});
+			
+			panelElement.on("drop", function() {
+				self._firePanelPossiblyUpdatedEvent(panelElement);
+			});
+			
 			panelStructure.internal = {
 				type: "panel",
 				panelElement: panelElement,
 				tabElement: tabElement,
 				parentStructure: parentStructure
 			};
+		},
+		
+		_firePanelPossiblyUpdatedEvent: function(panelElement) {
+			this._trigger("panelContentPossiblyUpdated", {
+				panelElement: panelElement
+			});
 		},
 		
 		_addSortableToGroups: function(groupOfGroupsStructure) {
