@@ -167,9 +167,12 @@
 		},
 		
 		_firePanelPossiblyUpdatedEvent: function(panelElement) {
-			this._trigger("panelContentPossiblyUpdated", {
-				panelElement: panelElement
-			});
+			var self = this;
+			setTimeout(function() {
+				self._trigger("panelContentPossiblyUpdated", {
+					panelElement: panelElement
+				});
+			}, 1);
 		},
 		
 		_addSortableToGroups: function(groupOfGroupsStructure) {
