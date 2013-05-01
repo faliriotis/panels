@@ -287,11 +287,8 @@
 					
 					var panelElement = $(panelElementSelector);
 					var panelStructure = self._getStructureByElement(panelElement);
-					if (panelElement.css("width")) {
+					if (panelStructure) {
 						panelStructure.width = panelElement.css("width");
-					}
-					
-					if (panelElement.css("height")) {
 						panelStructure.height = panelElement.css("height");
 					}
 					
