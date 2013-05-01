@@ -137,6 +137,14 @@
 				panelElement.addClass(panelStructure.panelClasses);
 			}
 			
+			if (panelStructure.width) {
+				panelElement.css("width", panelStructure.width);
+			}
+			
+			if (panelStructure.height) {
+				panelElement.css("height", panelStructure.height);
+			}
+			
 			parentStructure.internal.element.append(panelElement);
 			
 			var tabElement = this.providedTabList.children('li').find('a[href="#' + panelStructure.id + '"]').closest("li");
@@ -257,6 +265,10 @@
 						if (currentResizingPanel.get(0) != otherPanel.get(0)) {
 							if (resizableOptions.clearWidthForOtherPanels) {
 								otherPanel.css("width", "");
+								var panelStructure = self._getStructureByElement(otherPanel);
+								if (panelStructure.width) {
+									delete panelStructure.width;
+								}
 							}
 						}
 					});
@@ -273,20 +285,40 @@
 					ui.element.css("top", "");
 					ui.element.css("left", "");
 					
+					var panelElement = $(panelElementSelector);
+					var panelStructure = self._getStructureByElement(panelElement);
+					if (panelElement.css("width")) {
+						panelStructure.width = panelElement.css("width");
+					}
+					
+					if (panelElement.css("height")) {
+						panelStructure.height = panelElement.css("height");
+					}
+					
 					self._trigger("panelResized", {
-						panelElement: $(panelElementSelector)
+						panelElement: panelElement
 					});
 				}
 			});
 		},
 		
 		_removeResizableFromPanels: function(groupStructure) {
+			var self = this;
 			try {
 				groupStructure.internal.element.resizable("destroy");
 				groupStructure.internal.element.find(".panel").each(function() {
 					var panel = $(this);
 					panel.css("width", "");
 					panel.css("height", "");
+					
+					var panelStructure = self._getStructureByElement(panel);
+					if (panelStructure.width) {
+						delete panelStructure.width;
+					}
+					
+					if (panelStructure.height) {
+						delete panelStructure.height;
+					}
 				});
 			} catch(err) {
 				//An error will be thrown if resizable hasn't been initialized. In that case,
@@ -581,6 +613,14 @@
 			
 			panelStructure.internal.panelElement.css("width", "");
 			panelStructure.internal.panelElement.css("height", "");
+			
+			if (panelStructure.width) {
+				delete panelStructure.width;
+			}
+			
+			if (panelStructure.height) {
+				delete panelStructure.height;
+			}
 			
 			if (this.options.openPanelOnAdd) {
 				this._openPanel(panelStructure);
